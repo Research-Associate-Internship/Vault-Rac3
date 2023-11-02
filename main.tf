@@ -1,5 +1,5 @@
-resource "aws_instance" "vault" {
-  ami = "ami-007855ac798b5175e"
+resource "aws_instance" "vault-rac3" {
+  ami = "ami-0b4c67d70a6907b93"
 
   instance_type          = "t2.medium"
   key_name               = "bastion"
