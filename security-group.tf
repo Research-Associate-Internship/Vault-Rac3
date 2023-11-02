@@ -14,7 +14,7 @@ ingress {
     to_port   = 22
     protocol  = "tcp"
 
-    cidr_blocks = [10.0.101.14/32]
+    cidr_blocks = ["10.0.101.14/32"]
   }
 
   egress {
