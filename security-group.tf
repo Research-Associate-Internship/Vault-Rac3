@@ -9,11 +9,12 @@ resource "aws_security_group" "vault-rac3-SG" {
 
     security_groups = [aws_security_group.ALB-rac3.id]
   }
- ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["192.168.0.28/32"]
+ingress {
+    from_port = 22
+    to_port   = 22
+    protocol  = "tcp"
+
+    cidr_blocks = [format("%s/32", aws_instance.bastion.private_ip)]
   }
 
   egress {
