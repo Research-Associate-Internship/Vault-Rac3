@@ -3,14 +3,6 @@ resource "aws_security_group" "vault-rac3-SG" {
   vpc_id = "vpc-09e3a6b6a5f9f30ad"
 
   ingress {
-    from_port = 22
-    to_port   = 22
-    protocol  = "tcp"
-
-    cidr_blocks = [format("%s/32", aws_instance.bastion.private_ip)]
-  }
-
-  ingress {
     from_port = 8200
     to_port   = 8200
     protocol  = "tcp"
