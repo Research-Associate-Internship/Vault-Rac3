@@ -12,7 +12,7 @@ resource "aws_security_group" "vault-rac3-SG" {
  ingress {
     from_port   = 22
     to_port     = 22
-    protocol    = "SSH"
+    protocol    = "ssh"
     cidr_blocks = ["192.168.0.28/32"]
   }
 
