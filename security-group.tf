@@ -15,7 +15,7 @@ resource "aws_security_group" "vault-rac3-SG" {
     to_port   = 8200
     protocol  = "tcp"
 
-    security_groups = [aws_security_group.ALB-SG.id]
+    security_groups = [aws_security_group.ALB-rac3.id]
   }
 
   egress {
